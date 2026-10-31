@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今村真太郎 プロジェクトダッシュボード | SHINTARO IMAMURA Project Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #312e81 100%);
+        }
+        .card-hover {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 30px -10px rgba(0, 0, 0, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="gradient-bg text-white py-12 px-6 shadow-md">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div>
+                    <span class="inline-block bg-blue-500/30 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-3">Project Navigator</span>
+                    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">今村真太郎 プロジェクト総合ハブ</h1>
+                    <p class="text-slate-300 mt-2 text-sm md:text-base max-w-2xl">
+                        AIネイティブ・アーキテクトとしてのブランディング、事業・収益化モデル構想、およびWebサイト3案のプロトタイプ・企画設計書を取りまとめたプロジェクトポータルです。
+                    </p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="./README.md" class="inline-flex items-center px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg text-sm font-medium transition backdrop-blur-sm border border-white/20">
+                        📄 READMEを見る
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-6 py-10 flex-grow w-full space-y-12">
+
+        <!-- 1. Web Prototypes Section -->
+        <section>
+            <div class="flex items-center justify-between mb-6 pb-2 border-b border-slate-200">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-blue-600 inline-block"></span>
+                        Webサイト プロトタイプ（3案比較）
+                    </h2>
+                    <p class="text-xs text-slate-500 mt-1">企画意図に合わせて設計された3つの方向性をブラウザおよびPDFで確認できます。</p>
+                </div>
+                <span class="text-xs font-bold text-blue-700 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full">04_プロトタイプ</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Case A -->
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden card-hover flex flex-col">
+                    <div class="bg-slate-900 text-white p-5 border-b border-slate-800">
+                        <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-500/30 text-emerald-300 border border-emerald-500/40">案 A</span>
+                        <h3 class="text-lg font-bold mt-2">BtoB特化・実践型LP</h3>
+                        <p class="text-xs text-slate-400 mt-1">「今すぐ相談・依頼したい」中小企業・経営層向け</p>
+                    </div>
+                    <div class="p-5 flex-grow text-sm text-slate-600 space-y-3">
+                        <p>課題解決・具体事例・最短導入フロー・料金目安を前面に押し出し、実務パートナーとしての信頼感とCV（商談獲得）を最大化する構成。</p>
+                        <div class="text-xs text-slate-500 pt-2 border-t border-slate-100">
+                            <strong>主な特徴:</strong> 高いコンバージョン率、実務直結型、即戦力アピール
+                        </div>
+                    </div>
+                    <div class="p-4 bg-slate-50 border-t border-slate-100 flex flex-col gap-2">
+                        <a href="./03_Webサイトプロトタイプ/proto_a.html" target="_blank" class="w-full text-center py-2 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-sm rounded-lg shadow-sm transition">
+                            🌐 HTMLでプレビュー
+                        </a>
+                        <a href="./01_完成成果物_PDF/プロトタイプ_案A_BtoB特化LP.pdf" target="_blank" class="w-full text-center py-1.5 px-3 bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs rounded-lg transition">
+                            📑 PDF版を開く
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Case B -->
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden card-hover flex flex-col">
+                    <div class="bg-slate-900 text-white p-5 border-b border-slate-800">
+                        <span class="text-xs font-semibold px-2 py-0.5 rounded bg-indigo-500/30 text-indigo-300 border border-indigo-500/40">案 B</span>
+                        <h3 class="text-lg font-bold mt-2">知的ブランド母艦・オピニオン</h3>
+                        <p class="text-xs text-slate-400 mt-1">「思想や構想に共鳴した深い協業」を生むメディア型</p>
+                    </div>
+                    <div class="p-5 flex-grow text-sm text-slate-600 space-y-3">
+                        <p>エッセイ、AI Future Lab構想、哲学・人間理解の探究を発信し、思想的リーダーとしてのポジショニングと長期的なブランド価値を構築。</p>
+                        <div class="text-xs text-slate-500 pt-2 border-t border-slate-100">
+                            <strong>主な特徴:</strong> 権威性・メディア性、思想共鳴、独自世界観
+                        </div>
+                    </div>
+                    <div class="p-4 bg-slate-50 border-t border-slate-100 flex flex-col gap-2">
+                        <a href="./03_Webサイトプロトタイプ/proto_b.html" target="_blank" class="w-full text-center py-2 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm rounded-lg shadow-sm transition">
+                            🌐 HTMLでプレビュー
+                        </a>
+                        <a href="./01_完成成果物_PDF/プロトタイプ_案B_知的ブランド母艦.pdf" target="_blank" class="w-full text-center py-1.5 px-3 bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs rounded-lg transition">
+                            📑 PDF版を開く
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Case C -->
+                <div class="bg-white rounded-xl border-2 border-blue-600 overflow-hidden card-hover flex flex-col relative shadow-md">
+                    <div class="absolute top-2 right-2 bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">
+                        推奨・総合型
+                    </div>
+                    <div class="bg-slate-900 text-white p-5 border-b border-slate-800">
+                        <span class="text-xs font-semibold px-2 py-0.5 rounded bg-blue-500/30 text-blue-300 border border-blue-500/40">案 C</span>
+                        <h3 class="text-lg font-bold mt-2">ハイブリッド総合ポータル</h3>
+                        <p class="text-xs text-slate-400 mt-1">実務解決力と知的ブランドの二刀流構成</p>
+                    </div>
+                    <div class="p-5 flex-grow text-sm text-slate-600 space-y-3">
+                        <p>ファーストビューで実務相談・導入実績を明示しつつ、後半にラボ構想・思想・ビジョンを統合。あらゆるステークホルダーに対応できる旗艦サイト。</p>
+                        <div class="text-xs text-slate-500 pt-2 border-t border-slate-100">
+                            <strong>主な特徴:</strong> 万能性、即時案件獲得＋長期ブランドの両立
+                        </div>
+                    </div>
+                    <div class="p-4 bg-blue-50/50 border-t border-blue-100 flex flex-col gap-2">
+                        <a href="./03_Webサイトプロトタイプ/proto_c.html" target="_blank" class="w-full text-center py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm rounded-lg shadow transition">
+                            🌐 HTMLでプレビュー
+                        </a>
+                        <a href="./01_完成成果物_PDF/プロトタイプ_案C_ハイブリッド総合ポータル.pdf" target="_blank" class="w-full text-center py-1.5 px-3 bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs rounded-lg transition">
+                            📑 PDF版を開く
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Planning & Strategy Documents Section -->
+        <section>
+            <div class="flex items-center justify-between mb-6 pb-2 border-b border-slate-200">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-indigo-600 inline-block"></span>
+                        企画書・設計ドキュメント
+                    </h2>
+                    <p class="text-xs text-slate-500 mt-1">ブランディングから事業構想、Web設計書までのドキュメント体系です。</p>
+                </div>
+                <span class="text-xs font-bold text-slate-600 bg-slate-100 border border-slate-200 px-3 py-1 rounded-full">Doc Archives</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Group 1: Profile -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 card-hover flex flex-col">
+                    <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">01_プロフィール</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">プロフィール・人物分析</h3>
+                    <p class="text-sm text-slate-600 mb-4 flex-grow">
+                        強み、独自性、価値観、探究テーマ、キャッチコピー候補（5案）などパーソナルブランドの核を言語化した基本資料。
+                    </p>
+                    <div class="pt-4 border-t border-slate-100 flex flex-col gap-2">
+                        <a href="./02_企画・原稿ドキュメント/今村真太郎_プロフィール・人物分析.md" class="text-blue-600 hover:text-blue-800 text-sm font-semibold flex items-center justify-between">
+                            <span>Markdownを開く</span>
+                            <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Group 2: Business & Monetization -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 card-hover flex flex-col">
+                    <div class="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-2">02_事業・収益化構想</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">事業・収益化モデル構想</h3>
+                    <p class="text-sm text-slate-600 mb-4 flex-grow">
+                        AI時代における経済的自立と豊かさを実現するビジネスモデル、サービス設計、収益カタログ＆ダッシュボード。
+                    </p>
+                    <div class="pt-4 border-t border-slate-100 space-y-2 text-xs">
+                        <div class="flex items-center justify-between">
+                            <span class="text-slate-700 font-medium">収益化カタログ＆ダッシュボード</span>
+                            <div class="flex gap-2">
+                                <a href="./02_企画・原稿ドキュメント/収益化アイデア_ビジュアルカタログ＆ダッシュボード.md" class="text-blue-600 hover:underline">MD</a>
+                                <span class="text-slate-300">|</span>
+                                <a href="./01_完成成果物_PDF/収益化アイデア_ビジュアルカタログ＆ダッシュボード.pdf" class="text-emerald-600 hover:underline">PDF</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-slate-700 font-medium">経済的豊かさ事業アイデア集</span>
+                            <div class="flex gap-2">
+                                <a href="./02_企画・原稿ドキュメント/経済的豊かさを実現する事業・収益化アイデア集.md" class="text-blue-600 hover:underline">MD</a>
+                                <span class="text-slate-300">|</span>
+                                <a href="./01_完成成果物_PDF/経済的豊かさを実現する事業・収益化アイデア集.pdf" class="text-emerald-600 hover:underline">PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 3: Website Specs -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 card-hover flex flex-col">
+                    <div class="text-xs font-bold text-purple-600 uppercase tracking-wider mb-2">03_Webサイト企画・仕様</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Webサイト企画・詳細設計書</h3>
+                    <p class="text-sm text-slate-600 mb-4 flex-grow">
+                        Webサイト立ち上げの戦略背景、3案の比較選定、ワイヤーフレーム・UI/UX要件の詳細設計書。
+                    </p>
+                    <div class="pt-4 border-t border-slate-100 space-y-2 text-xs">
+                        <div class="flex items-center justify-between">
+                            <span class="text-slate-700 font-medium">ホームページ3案 詳細企画設計書</span>
+                            <div class="flex gap-2">
+                                <a href="./02_企画・原稿ドキュメント/ホームページ3案_詳細企画設計書.md" class="text-blue-600 hover:underline">MD</a>
+                                <span class="text-slate-300">|</span>
+                                <a href="./01_完成成果物_PDF/ホームページ3案_詳細企画設計書.pdf" class="text-emerald-600 hover:underline">PDF</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-slate-700 font-medium">ホームページ立ち上げ企画案</span>
+                            <div class="flex gap-2">
+                                <a href="./02_企画・原稿ドキュメント/ホームページ立ち上げ企画案.md" class="text-blue-600 hover:underline">MD</a>
+                                <span class="text-slate-300">|</span>
+                                <a href="./01_完成成果物_PDF/ホームページ立ち上げ企画案.pdf" class="text-emerald-600 hover:underline">PDF</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-slate-700 font-medium">事業実行のためのウェブサイト構築企画案</span>
+                            <div class="flex gap-2">
+                                <a href="./02_企画・原稿ドキュメント/事業実行のためのウェブサイト構築企画案.md" class="text-blue-600 hover:underline">MD</a>
+                                <span class="text-slate-300">|</span>
+                                <a href="./01_完成成果物_PDF/事業実行のためのウェブサイト構築企画案.pdf" class="text-emerald-600 hover:underline">PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
+        <p>&copy; 2026 SHINTARO IMAMURA Project Workspace. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

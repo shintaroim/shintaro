@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今村真太郎 | SHINTARO IMAMURA - AI Native Architect & Transformation</title>
+    <!-- Tailwind CSS (ローカル・オフライン・CSP対応スタイルも併載) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                            950: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* カスタムアニメーションと装飾 */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-slate-200/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-700 to-indigo-500 flex items-center justify-center text-white font-bold text-lg shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
+                    SI
+                </div>
+                <div>
+                    <span class="text-lg font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors">今村 真太郎</span>
+                    <span class="block text-xs font-semibold text-slate-600 tracking-wider">AI NATIVE ARCHITECT</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#philosophy" class="hover:text-blue-600 transition-colors">思想・強み</a>
+                <a href="#enterprise" class="hover:text-blue-600 transition-colors">法人向け業務再設計</a>
+                <a href="#lab" class="hover:text-blue-600 transition-colors">AI Future Lab</a>
+                <a href="#academy" class="hover:text-blue-600 transition-colors">構造化思考スクール</a>
+                <a href="#diagnosis" class="hover:text-blue-600 transition-colors">無料AI診断</a>
+            </nav>
+
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-sm hover:shadow-md hover:shadow-blue-500/20 transition-all">
+                    無料相談を予約する
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-slate-900">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#philosophy" class="block py-2 text-sm font-medium text-slate-700">思想・強み</a>
+            <a href="#enterprise" class="block py-2 text-sm font-medium text-slate-700">法人向け業務再設計</a>
+            <a href="#lab" class="block py-2 text-sm font-medium text-slate-700">AI Future Lab</a>
+            <a href="#academy" class="block py-2 text-sm font-medium text-slate-700">構造化思考スクール</a>
+            <a href="#diagnosis" class="block py-2 text-sm font-medium text-slate-700">無料AI診断</a>
+            <a href="#contact" class="block text-center py-2.5 rounded-xl text-sm font-semibold text-white bg-blue-600">無料相談を予約する</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden bg-gradient-to-b from-blue-50/50 via-white to-slate-50">
+        <!-- Background Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-blue-300/30 to-purple-300/30 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100/80 border border-blue-200 text-blue-800 text-xs font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                    AI時代の仕事・組織・人生を再設計する
+                </div>
+                
+                <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15] mb-6">
+                    人と組織の可能性を、<br>
+                    <span class="gradient-text">技術と仕組み</span>で解放する。
+                </h1>
+
+                <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-10 max-w-2xl mx-auto">
+                    システム開発・業務設計・AI活用を横断。<br class="hidden sm:inline">
+                    曖昧で複雑な課題を論理的に構造化し、現場で動く実行可能な仕組みへと変換するプロジェクトマネージャー／システム設計者。
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#diagnosis" class="w-full sm:w-auto px-8 py-3.5 rounded-xl text-base font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-500/25 transition-all flex items-center justify-center gap-2">
+                        <span>自社AI適応度・無料診断（3分）</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                    <a href="#philosophy" class="w-full sm:w-auto px-8 py-3.5 rounded-xl text-base font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 shadow-sm transition-all">
+                        活動思想と強みを見る
+                    </a>
+                </div>
+
+                <!-- Metrics Strip -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-10 border-t border-slate-200 text-left">
+                    <div class="p-4 bg-white/70 backdrop-blur rounded-xl border border-slate-200/60 shadow-sm">
+                        <div class="text-2xl font-bold text-blue-600">65%</div>
+                        <div class="text-xs text-slate-500 font-medium mt-1">定型業務の工数削減率</div>
+                    </div>
+                    <div class="p-4 bg-white/70 backdrop-blur rounded-xl border border-slate-200/60 shadow-sm">
+                        <div class="text-2xl font-bold text-blue-600">100+</div>
+                        <div class="text-xs text-slate-500 font-medium mt-1">要件定義・システム設計実績</div>
+                    </div>
+                    <div class="p-4 bg-white/70 backdrop-blur rounded-xl border border-slate-200/60 shadow-sm">
+                        <div class="text-2xl font-bold text-purple-600">End-to-End</div>
+                        <div class="text-xs text-slate-500 font-medium mt-1">構想から実装・定着まで一貫</div>
+                    </div>
+                    <div class="p-4 bg-white/70 backdrop-blur rounded-xl border border-slate-200/60 shadow-sm">
+                        <div class="text-2xl font-bold text-emerald-600">Value-based</div>
+                        <div class="text-xs text-slate-500 font-medium mt-1">成果創出コミット型パートナー</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHY & CORE STRENGTHS -->
+    <section id="philosophy" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold text-blue-600 tracking-wider uppercase">CORE COMPETENCE</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+                    なぜ「今村真太郎」なのか？
+                </h2>
+                <p class="text-sm sm:text-base text-slate-600 mt-3">
+                    世の中に「プロンプトを教える人」や「受託開発をする人」は溢れています。<br>
+                    しかし、**構造化・実装・人間変革が三位一体となった存在**は稀有です。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xl mb-6 group-hover:scale-110 transition-transform">
+                        01
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">構造化・要件定義力</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        「何が問題かわからない」「やりたいことが曖昧」というカオスな状態から、本質的なボトルネックを特定し、論理的な業務フローと実行手順へ落とし込みます。
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-emerald-400 hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xl mb-6 group-hover:scale-110 transition-transform">
+                        02
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">現場と技術をつなぐ実装力</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        システム開発会社を運営してきた経験から、机上の空論ではなく現場の生々しい抵抗や運用上の制約を考慮。AIエージェントを実務で毎日動く仕組みへと定着させます。
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-purple-400 hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-xl mb-6 group-hover:scale-110 transition-transform">
+                        03
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">人間の可能性と変化への関心</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        AIを単なるコスト削減ツールとして捉えず、働く人の余力を生み出し、知的活動や自己実現の可能性を拡張するインフラとして設計します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENTERPRISE TRANSFORMATION SECTION -->
+    <section id="enterprise" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl mb-16">
+                <span class="text-xs font-bold text-blue-400 tracking-wider uppercase">FOR ENTERPRISE & SMB</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">
+                    ツール導入で終わらせない。<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">AIネイティブな業務・組織再設計</span>
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-4 leading-relaxed">
+                    「ChatGPTを契約したが誰も使っていない」「現場が抵抗している」という企業へ。<br>
+                    業務プロセスの棚卸しからAIエージェントの実装、社内リーダーの育成までワンストップで伴走します。
+                </p>
+            </div>
+
+            <!-- 3 Step Method -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                <div class="p-6 rounded-xl bg-slate-800/80 border border-slate-700">
+                    <div class="text-blue-400 text-xs font-mono font-bold mb-2">STEP 01</div>
+                    <h3 class="text-base font-bold text-white mb-2">業務の徹底構造化</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        泥臭い現場ヒアリングを実施。属人化した手順を分解し、誰でも再現可能なフロー図として可視化します。
+                    </p>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-800/80 border border-slate-700">
+                    <div class="text-emerald-400 text-xs font-mono font-bold mb-2">STEP 02</div>
+                    <h3 class="text-base font-bold text-white mb-2">AIエージェント実装</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Dify、Make、API連携等を活用し、要約・下書き・データ連携など実務直結の自動化ワークフローを構築。
+                    </p>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-800/80 border border-slate-700">
+                    <div class="text-purple-400 text-xs font-mono font-bold mb-2">STEP 03</div>
+                    <h3 class="text-base font-bold text-white mb-2">定着と自走化支援</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        社員向けのマインド変革研修を行い、自社内でAI改善を回せる「社内変革リーダー」を育成します。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pricing Plans -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Plan 1 -->
+                <div class="p-8 rounded-2xl bg-slate-800 border border-slate-700 hover:border-blue-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-bold text-blue-400 uppercase">LIGHT & STRATEGIC</div>
+                        <h4 class="text-xl font-bold text-white mt-1">Fractional CTO / AI戦略参謀</h4>
+                        <div class="text-3xl font-extrabold text-white my-4">月額 40万円〜 <span class="text-xs font-normal text-slate-400">(税別)</span></div>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-6">
+                            自社にIT・AIの責任者がいない経営者専属で、技術選定、AI投資判断、外注ベンダーの要件定義とディレクションを代行します。
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                            <li class="flex items-center gap-2">✔ 月2回の戦略ミーティング ＋ 常時チャット相談</li>
+                            <li class="flex items-center gap-2">✔ AIツール選定・要件定義書の策定支援</li>
+                            <li class="flex items-center gap-2">✔ 外注開発ベンダーの監査・進捗管理</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full text-center py-3 rounded-xl bg-slate-700 hover:bg-slate-600 text-white text-xs font-bold transition-colors">
+                        参謀プランの相談をする
+                    </a>
+                </div>
+
+                <!-- Plan 2 -->
+                <div class="p-8 rounded-2xl bg-gradient-to-b from-blue-900/60 to-slate-800 border-2 border-blue-500 transition-all flex flex-col justify-between relative shadow-xl shadow-blue-500/10">
+                    <div class="absolute -top-3 right-6 px-3 py-1 bg-blue-500 text-white text-[10px] font-bold rounded-full uppercase tracking-wider">
+                        POPULAR
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-blue-300 uppercase">FULL TRANSFORMATION</div>
+                        <h4 class="text-xl font-bold text-white mt-1">AIネイティブ組織再設計 顧問</h4>
+                        <div class="text-3xl font-extrabold text-white my-4">月額 80万円〜 <span class="text-xs font-normal text-slate-400">(税別)</span></div>
+                        <p class="text-xs text-slate-200 leading-relaxed mb-6">
+                            特定部門の業務フロー全体をAIエージェント前提でゼロベース再構築。業務時間の大幅削減と社員の自走化までフルコミット。
+                        </p>
+                        <ul class="text-xs text-slate-200 space-y-2 mb-6">
+                            <li class="flex items-center gap-2">✔ 週1回の定例・現場ヒアリング ＋ 実装支援</li>
+                            <li class="flex items-center gap-2">✔ 実務直結AIエージェントの設計・プロトタイプ構築</li>
+                            <li class="flex items-center gap-2">✔ 社員向け変革ブートキャンプ・社内リーダー認定</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full text-center py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold shadow-md transition-colors">
+                        組織再設計プランを申し込む
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAB & ACADEMY SHOWCASE -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- AI Future Lab -->
+                <div id="lab" class="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-xs font-semibold mb-4">
+                            🧪 RESEARCH & INTELLIGENCE
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">AI Future Lab</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                            AI時代の仕事・企業・学習・人生を再設計するための知的実験機関。最新の学際的知見をAIが巡回・構造化し、先進的なリーダーに思考の問いと意思決定支援を提供します。
+                        </p>
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-start gap-3">
+                                <span class="text-purple-600 font-bold text-sm">・</span>
+                                <span class="text-xs text-slate-600">最新AI動向＆学際レポートの定期インテリジェンス配信</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="text-purple-600 font-bold text-sm">・</span>
+                                <span class="text-xs text-slate-600">経営判断の壁打ちを行える専用AIエージェント基盤</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="text-purple-600 font-bold text-sm">・</span>
+                                <span class="text-xs text-slate-600">招待制エグゼクティブ・リトリートサロン</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-500">月額 3万円〜</span>
+                        <a href="#contact" class="text-xs font-bold text-purple-600 hover:text-purple-700 flex items-center gap-1">
+                            構想マニフェストを見る ➔
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Academy -->
+                <div id="academy" class="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-semibold mb-4">
+                            🎓 BOOTCAMP FOR LEADERS
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">AI × 構造化思考ブートキャンプ</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                            プログラミングではなく「曖昧な課題を構造化し、AIで動く仕組みに変える力」を鍛える選抜制プログラム。3ヶ月で自力で業務をシステム化できる人材へ変革します。
+                        </p>
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-start gap-3">
+                                <span class="text-blue-600 font-bold text-sm">・</span>
+                                <span class="text-xs text-slate-600">Month 1: 課題を論理モデルに変える要件定義力</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="text-blue-600 font-bold text-sm">・</span>
+                                <span class="text-xs text-slate-600">Month 2: AIエージェントと動く仕組みの実装</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="text-blue-600 font-bold text-sm">・</span>
+                                <span class="text-xs text-slate-600">Month 3: 実案件でのプロトタイプ開発演習</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-500">受講料 40万円 / 定員各期15名</span>
+                        <a href="#contact" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                            第1期 募集要項を見る ➔
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE DIAGNOSIS TOOL (リード獲得エンジン) -->
+    <section id="diagnosis" class="py-20 bg-gradient-to-tr from-slate-900 via-indigo-950 to-blue-950 text-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-xs font-bold text-blue-400 tracking-wider uppercase">INTERACTIVE ASSESSMENT</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold mt-2">
+                    自社AIネイティブ適応度 簡易診断（約1分）
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-300 mt-2">
+                    貴社がAIを導入して本当に利益や余力を出せる状態にあるか、3問で判定します。
+                </p>
+            </div>
+
+            <!-- Quiz Container -->
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 sm:p-8 shadow-2xl">
+                <div id="quiz-step-1" class="quiz-step">
+                    <div class="text-xs font-semibold text-blue-300 mb-2">Q1. 貴社の業務手順書の現状は？</div>
+                    <div class="space-y-3">
+                        <button onclick="answerQuestion(1, 1)" class="w-full text-left p-3.5 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 text-xs sm:text-sm transition-all">
+                            A. ほぼ頭の中にあり、担当者ごとにやり方が異なる（属人化）
+                        </button>
+                        <button onclick="answerQuestion(1, 2)" class="w-full text-left p-3.5 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 text-xs sm:text-sm transition-all">
+                            B. マニュアルはあるが更新されておらず、あまり見られていない
+                        </button>
+                        <button onclick="answerQuestion(1, 3)" class="w-full text-left p-3.5 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 text-xs sm:text-sm transition-all">
+                            C. 業務フローが整理され、誰でも同じ手順で実行できる
+                        </button>
+                    </div>
+                </div>
+
+                <div id="quiz-step-2" class="quiz-step hidden">
+                    <div class="text-xs font-semibold text-blue-300 mb-2">Q2. 社内でのAI利用状況は？</div>
+                    <div class="space-y-3">
+                        <button onclick="answerQuestion(2, 1)" class="w-full text-left p-3.5 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 text-xs sm:text-sm transition-all">
+                            A. 個人がたまにChatGPTに文章を作らせる程度
+                        </button>
+                        <button onclick="answerQuestion(2, 2)" class="w-full text-left p-3.5 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 text-xs sm:text-sm transition-all">
+                            B. 全社導入したが、具体的な業務フローに組み込まれていない
+                        </button>
+                        <button onclick="answerQuestion(2, 3)" class="w-full text-left p-3.5 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 text-xs sm:text-sm transition-all">
+                            C. APIやツール連携で定型業務の一部が自動化されている
+                        </button>
+                    </div>
+                </div>
+
+                <div id="quiz-step-3" class="quiz-step hidden">
+                    <div class="text-xs font-semibold text-blue-300 mb-2">Q3. 最も解決したい課題は？</div>
+                    <div class="space-y-3">
+                        <button onclick="answerQuestion(3, 1)" class="w-full text-left p-3.5 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 text-xs sm:text-sm transition-all">
+                            A. バックオフィスや定型業務の残業を減らし、余力を作りたい
+                        </button>
+                        <button onclick="answerQuestion(3, 2)" class="w-full text-left p-3.5 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 text-xs sm:text-sm transition-all">
+                            B. 社内にIT責任者がおらず、AI投資や外注判断をリードしてほしい
+                        </button>
+                        <button onclick="answerQuestion(3, 3)" class="w-full text-left p-3.5 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 text-xs sm:text-sm transition-all">
+                            C. AIを活用した新規事業やサービスを高速でプロトタイプ検証したい
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Result Box -->
+                <div id="quiz-result" class="hidden text-center py-4">
+                    <div class="w-14 h-14 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center mx-auto text-2xl mb-4">
+                        💡
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">診断結果：<span id="result-title" class="text-blue-400">業務構造化優先タイプ</span></h3>
+                    <p id="result-desc" class="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto mb-6 leading-relaxed">
+                        ツールを入れる前に、まずは「属人化した業務フローの可視化・整理」が必要です。ここをスキップしてAIを入れても費用倒れになります。
+                    </p>
+                    <div class="p-4 rounded-xl bg-white/5 border border-white/10 max-w-md mx-auto mb-6 text-left text-xs text-slate-300 space-y-1">
+                        <div>・<strong>推奨ステップ:</strong> 業務フロー棚卸し ➔ AIエージェント設計</div>
+                        <div>・<strong>想定余力創出:</strong> 月間 80〜150時間</div>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold shadow-lg shadow-blue-500/30 transition-all">
+                        <span>この結果を元に無料個別診断（60分）を予約する</span>
+                        <span>➔</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & BOOKING SECTION -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-xl mx-auto mb-12">
+                <span class="text-xs font-bold text-blue-600 tracking-wider uppercase">GET IN TOUCH</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+                    無料相談・個別診断のお申し込み
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 mt-2">
+                    法人向けAI業務再設計、顧問契約、スクール受講のご相談など、まずはお気軽にご連絡ください。
+                </p>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm">
+                <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5">お名前 <span class="text-red-500">*</span></label>
+                            <input type="text" required placeholder="今村 太郎" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5">貴社名 / 組織名</label>
+                            <input type="text" placeholder="株式会社〇〇" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5">メールアドレス <span class="text-red-500">*</span></label>
+                            <input type="email" required placeholder="name@company.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5">ご相談の種別 <span class="text-red-500">*</span></label>
+                            <select required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-blue-500 focus:outline-none bg-white">
+                                <option value="">選択してください</option>
+                                <option value="enterprise">法人向け AI業務再設計・顧問（無料診断）</option>
+                                <option value="cto">Fractional CTO / AI戦略参謀</option>
+                                <option value="bootcamp">AI×構造化思考ブートキャンプ</option>
+                                <option value="lab">AI Future Lab について</option>
+                                <option value="other">その他・取材・提携など</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1.5">ご相談内容・現状の課題</label>
+                        <textarea rows="4" placeholder="現在の業務課題や、検討されている内容を簡単にご記入ください。" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
+                    </div>
+
+                    <div class="text-center pt-2">
+                        <button type="submit" class="w-full sm:w-auto px-10 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold shadow-md hover:shadow-lg transition-all">
+                            送信する（無料相談を予約）
+                        </button>
+                    </div>
+                </form>
+                <div id="form-success" class="hidden text-center py-6">
+                    <div class="text-3xl mb-2">🎉</div>
+                    <div class="text-base font-bold text-slate-900">送信が完了しました</div>
+                    <div class="text-xs text-slate-600 mt-1">24時間以内にご案内および日程調整リンクをお送りいたします。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-500 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-blue-600 text-white font-bold flex items-center justify-center text-sm">
+                    SI
+                </div>
+                <span class="text-slate-300 font-bold text-sm">今村真太郎 / SHINTARO IMAMURA</span>
+            </div>
+            <div class="text-xs text-slate-600">
+                &copy; 2026 Shintaro Imamura. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Quiz Logic
+        let answers = {};
+        function answerQuestion(step, val) {
+            answers[step] = val;
+            document.getElementById(`quiz-step-${step}`).classList.add('hidden');
+            if (step < 3) {
+                document.getElementById(`quiz-step-${step + 1}`).classList.remove('hidden');
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            document.getElementById('quiz-result').classList.remove('hidden');
+            const titleEl = document.getElementById('result-title');
+            const descEl = document.getElementById('result-desc');
+
+            if (answers[1] === 1) {
+                titleEl.textContent = '「業務構造化＆フロー可視化」優先タイプ';
+                descEl.textContent = '現在、業務が担当者の頭の中にあり属人化しています。ツールを急いで入れる前に、まずは「業務プロセスの棚卸しと標準化」を行うことで、劇的なAI効果（月100時間以上の削減）が見込めます。';
+            } else if (answers[2] === 2) {
+                titleEl.textContent = '「AIエージェント実務組み込み」優先タイプ';
+                descEl.textContent = 'ツールを契約したものの現場実務と乖離しています。定型業務（議事録、下書き、データ照合）を自動で行う専用エージェントを現場ワークフローに直結させることで、利用率とROIを跳ね上げられます。';
+            } else {
+                titleEl.textContent = '「AIネイティブ組織変革・参謀」適応タイプ';
+                descEl.textContent = '基礎的な業務整理はできています。今必要なのは、全社的なAI戦略を描き、外部開発ベンダーやAI投資をリードするFractional CTO（AI参謀）としての伴走です。';
+            }
+        }
+
+        // Form Submit Simulation
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('contact-form').classList.add('hidden');
+            document.getElementById('form-success').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
