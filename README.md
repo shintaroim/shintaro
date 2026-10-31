@@ -7,7 +7,8 @@
 ## 🌐 オンラインプレビュー（GitHub Pages）
 本プロジェクトのWebプロトタイプおよび企画資料ハブは、以下のURLからブラウザ上で直接インタラクティブに操作・閲覧できます。
 
-👉 **[総合ポータル（プロトタイプ一覧）を開く](https://shintaroim.github.io/shintaro/)**
+👉 **[総合ポータル（プロトタイプ一覧）を開く](https://shintaroim.github.io/shintaro/)**  
+📚 **[公開資料ライブラリ（materials/）を開く](https://shintaroim.github.io/shintaro/materials/)**
 
 - **案A（BtoB特化・実践型LP）**: [https://shintaroim.github.io/shintaro/03_Webサイトプロトタイプ/proto_a.html](https://shintaroim.github.io/shintaro/03_Webサイトプロトタイプ/proto_a.html)
 - **案B（知的ブランド母艦・オピニオン）**: [https://shintaroim.github.io/shintaro/03_Webサイトプロトタイプ/proto_b.html](https://shintaroim.github.io/shintaro/03_Webサイトプロトタイプ/proto_b.html)
@@ -19,13 +20,14 @@
 
 ```text
 しんたろう/
-├── 01_完成成果物_PDF/               # クライアント提示・印刷・共有用の完成版PDF資料一式
-├── 02_企画・原稿ドキュメント/         # 企画原案、プロフィール、各種Markdown/テキスト
-├── 03_Webサイトプロトタイプ/         # 実際にブラウザで動かせるWebプロトタイプ3案（HTML）
-├── 04_ツール・自動生成スクリプト/     # 資料PDF・画像・HTML等を自動生成・変換するスクリプト群
-├── 05_作業中間データ・プレビュー/     # 作業ログ・旧版バックアップ等の中間データ
-├── index.html                      # すべてのプロトタイプ・企画書を一覧できる総合ポータルハブ
-└── README.md                       # 本ファイル（プロジェクト全体ガイド）
+├── materials/                          # 【公開用】各種PDF資料・企画ドキュメント・ライブラリ
+├── 01_完成成果物_PDF/                  # クライアント提示・印刷・共有用の完成版PDF資料一式
+├── 02_企画・原稿ドキュメント/            # 企画原案、プロフィール、各種Markdown/テキスト
+├── 03_Webサイトプロトタイプ/            # 実際にブラウザで動かせるWebプロトタイプ3案（HTML）
+├── 04_ツール・自動生成スクリプト/        # 資料PDF・画像・HTML等を自動生成・変換するスクリプト群
+├── 05_作業中間データ・プレビュー/        # 作業ログ・旧版バックアップ等の中間データ
+├── index.html                         # すべてのプロトタイプ・企画書を一覧できる総合ポータルハブ
+└── README.md                          # 本ファイル（プロジェクト全体ガイド）
 ```
 
 ---
