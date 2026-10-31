@@ -4,6 +4,17 @@
 
 ---
 
+## 🌐 オンラインプレビュー（GitHub Pages）
+本プロジェクトのWebプロトタイプおよび企画資料ハブは、以下のURLからブラウザ上で直接インタラクティブに操作・閲覧できます。
+
+👉 **[総合ポータル（プロトタイプ一覧）を開く](https://shintaroim.github.io/shintaro/)**
+
+- **案A（BtoB特化・実践型LP）**: [https://shintaroim.github.io/shintaro/03_Webサイトプロトタイプ/proto_a.html](https://shintaroim.github.io/shintaro/03_Webサイトプロトタイプ/proto_a.html)
+- **案B（知的ブランド母艦・オピニオン）**: [https://shintaroim.github.io/shintaro/03_Webサイトプロトタイプ/proto_b.html](https://shintaroim.github.io/shintaro/03_Webサイトプロトタイプ/proto_b.html)
+- **案C（ハイブリッド総合ポータル・推奨）**: [https://shintaroim.github.io/shintaro/03_Webサイトプロトタイプ/proto_c.html](https://shintaroim.github.io/shintaro/03_Webサイトプロトタイプ/proto_c.html)
+
+---
+
 ## 📁 フォルダ構成と役割
 
 ```text
